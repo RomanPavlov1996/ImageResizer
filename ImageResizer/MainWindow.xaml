@@ -1,0 +1,104 @@
+﻿<metro:Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:metro="http://schemas.codeplex.com/elysium"
+	xmlns:params="http://schemas.codeplex.com/elysium/params"
+	x:Class="ImageResizer.MainWindow"
+	params:Manager.Theme="Light"
+	params:Manager.AccentBrush="{x:Static metro:AccentBrushes.Blue}"
+	params:Manager.ContrastBrush="White"
+	params:Design.Theme="Light"
+	params:Design.AccentBrush="{x:Static metro:AccentBrushes.Blue}"
+	params:Design.ContrastBrush="White"
+	Background="{DynamicResource BackgroundBrush}"
+	Title="ImageResizer"
+	Height="191.614"
+	Width="525"
+	ResizeMode="NoResize">
+    <Grid>
+		<Button
+			x:Name="btnSelect"
+			Content="Select folder"
+			HorizontalAlignment="Left"
+			Margin="10,10,0,0"
+			VerticalAlignment="Top"
+			Width="106"
+			Click="btnSelect_Click" />
+		<Label
+			x:Name="lblFolderPath"
+			Content="FolderPath"
+			HorizontalAlignment="Left"
+			Margin="121,13,0,0"
+			VerticalAlignment="Top"
+			Width="388"
+			MaxWidth="388" />
+		<Label
+			Content="Width"
+			HorizontalAlignment="Left"
+			Margin="10,49,0,0"
+			VerticalAlignment="Top" />
+		<TextBox
+			x:Name="txtWidth"
+			HorizontalAlignment="Left"
+			Height="31"
+			Margin="57,46,0,0"
+			TextWrapping="Wrap"
+			VerticalAlignment="Top"
+			Width="50"
+			Text="50" />
+		<Label
+			Content="Height"
+			HorizontalAlignment="Left"
+			Margin="10,89,0,0"
+			VerticalAlignment="Top" />
+		<TextBox
+			x:Name="txtHeight"
+			HorizontalAlignment="Left"
+			Height="31"
+			Margin="57,86,0,0"
+			TextWrapping="Wrap"
+			VerticalAlignment="Top"
+			Width="50"
+			Text="50" />
+		<ComboBox
+			x:Name="cmbHeight"
+			HorizontalAlignment="Left"
+			Margin="112,86,0,0"
+			VerticalAlignment="Top"
+			Width="50"
+			SelectedIndex="1">
+			<ComboBoxItem
+				Content="px" />
+			<ComboBoxItem
+				Content="%" />
+		</ComboBox>
+		<Button
+			x:Name="btnResize"
+			Content="Resize!"
+			HorizontalAlignment="Left"
+			Margin="10,122,0,0"
+			VerticalAlignment="Top"
+			Width="152"
+			Click="btnResize_Click" />
+		<ComboBox
+			x:Name="cmbWidth"
+			HorizontalAlignment="Left"
+			Margin="112,46,0,0"
+			VerticalAlignment="Top"
+			Width="50"
+			SelectedIndex="1">
+			<ComboBoxItem
+				Content="px" />
+			<ComboBoxItem
+				Content="%" />
+		</ComboBox>
+		<metro:ProgressRing
+			x:Name="prgRing"
+			HorizontalAlignment="Left"
+			Height="104"
+			Margin="221,49,0,0"
+			VerticalAlignment="Top"
+			Width="104" />
+
+	</Grid>
+</metro:Window>
